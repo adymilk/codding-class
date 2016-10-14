@@ -1,0 +1,141 @@
+.clean{clear: both}
+ul li{list-style: none}
+a:hover {
+    text-decoration: none
+}
+
+.time span {
+    float: right;
+}
+
+.thumbnail{
+    padding: 0;
+}
+.num a {
+    background-color: #1cb25b;
+    text-align: center;
+    float: right;
+    color: #fff;
+    font-size: 13px;
+    padding-left: 5px;
+    height: 21px;
+    line-height: 21px;
+    padding-right: 5px;
+}
+.name , .num{padding-left: 2px; margin-bottom: 0;}
+.tit{
+    position: relative;
+    padding: 2px;
+    top: -21px;
+    font-size: 12px;
+    color: #fff;
+    overflow: hidden;
+    /*設置背景透明 感謝葛成龍提供的思路*/
+    background: rgba(0,0,0,0.4);
+}
+.time{ margin-bottom:0px;}
+.logo{
+    float: left;
+    margin: 0px 150px 0 10px;
+}
+.search{
+    position: relative;
+    float: left;
+    margin-top: -3px;
+}
+.search .search_inp {
+    float: left;
+    padding: 0 10px;
+    width: 284px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px #dcdcdc solid;
+    -webkit-transition: border-color .2s linear;
+    transition: border-color .2s linear;
+    box-sizing: content-box;
+}
+.search .search_btn {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: 1px #dcdcdc solid;
+    border-left: none;
+    background: url(../image/search_btn.png) no-repeat center center;
+    cursor: pointer;
+    box-sizing: content-box;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+.search .search_tip {
+    position: absolute;
+    right: 62px;
+    top: 5px;
+}
+.search_tip li{
+    float: right;
+    margin: 5px;
+    padding: 2px;
+    background-color: #B7B7B7;
+
+}
+.search_tip li a{
+    color: #fff;
+}
+.login{
+    float: right;
+}
+.navi_tel {
+    padding-left: 25px;
+    float: right;
+    width: 207px;
+    height: 20px;
+    background: url(../image/speaker.png) no-repeat left center;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+}
+.developer-pic{
+    float: left;
+    margin-right: 5px;
+}
+.money{
+    float: left;
+}
+.learn-line button{
+background-color: #9DA9A2;
+}
+.learn-line{
+    border:1px solid #ccc;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.learn-line .center{
+    margin-top: 20px;
+    text-align: center;
+}
+/*底部footer*/
+.footer{
+    padding-top: 30px;
+    background-color: #2F332F;
+    color: #CDCDCD;
+}
+.footer a{
+    color: #CDCDCD;
+}
+.contact{
+    text-align: center;
+}
+.font-weight{
+    font-weight: bold;
+    font-size: 17px;
+}
+.qr-code img{
+    height:110px;
+    width: 110px;
+}
+.qr-code p{
+    padding-left: 27px;
+    padding-top: 5px;
+}
