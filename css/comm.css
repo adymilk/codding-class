@@ -1,4 +1,8 @@
 .clean{clear: both}
+
+a:link {
+    color: #000000;
+}
 ul li{list-style: none}
 a:hover {
     text-decoration: none
@@ -138,4 +142,48 @@ background-color: #9DA9A2;
 .qr-code p{
     padding-left: 27px;
     padding-top: 5px;
+}
+
+.content img {
+    width: 100%;
+}
+
+.tabs li, .tab li a {
+    text-align: center;
+    height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.padding_l_r {
+    padding: 4px;
+}
+
+.danger {
+    color: red;
+}
+
+.float_right {
+    float: right;
+}
+
+.detail_content {
+    display: none;
+}
+
+.thumbnail:hover .detail_content {
+    display: none;
+}
+
+.tabs {
+    border-top: 2px solid #ccc;
+}
+
+.active {
+    border-top: 1px solid #1cb25b;
+}
+
+.content a {
+    color: #000000;
 }
