@@ -188,6 +188,6 @@ background-color: #9DA9A2;
     color: #000000;
 }
 
-.tabs li:hover a {
+.active:hover a {
     color: #1cb25b;
 }

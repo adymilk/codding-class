@@ -244,12 +244,18 @@
         <div class="col-sm-12" style="padding: 0">
             <div class="tab">
                 <ul class="tabs" style="padding:0">
-                    <li class="active col-sm-2 col-xs-2"><a href="#tab1_content">热门</a></li>
-                    <li class="col-sm-2 col-xs-2"><a href="#tab2_content">HTML5</a></li>
-                    <li class="col-sm-2 col-xs-2"><a href="#tab3_content">UI</a></li>
-                    <li class="col-sm-2 col-xs-2"><a href="#tab4_content">IOS</a></li>
-                    <li class="col-sm-2 col-xs-2"><a href="#tab5_content">Android</a></li>
-                    <li class="col-sm-2 col-xs-2"><a href="#tab6_content">PHP</a></li>
+                    <li class="active col-sm-2 col-xs-2"><a href="#tab1_content"
+                                                            onclick="doSomething();return false">热门</a></li>
+                    <li class="col-sm-2 col-xs-2"><a href="#tab2_content" onclick="doSomething();return false">HTML5</a>
+                    </li>
+                    <li class="col-sm-2 col-xs-2"><a href="#tab3_content" onclick="doSomething();return false">UI</a>
+                    </li>
+                    <li class="col-sm-2 col-xs-2"><a href="#tab4_content" onclick="doSomething();return false">IOS</a>
+                    </li>
+                    <li class="col-sm-2 col-xs-2"><a href="#tab5_content"
+                                                     onclick="doSomething();return false">Android</a></li>
+                    <li class="col-sm-2 col-xs-2"><a href="#tab6_content" onclick="doSomething();return false">PHP</a>
+                    </li>
                     <div class="clean"></div>
                 </ul>
             </div>
@@ -771,43 +777,6 @@
             </div>
         </div>
     </div>
-    <!-- jQuery 控制tab切换begin -->
-    <script>
-        $(document).ready(function () {
-            // 初始化Tab_content
-            $(".tab_content").hide();
-            $(".tabs li:first").addClass("active").show();
-            $(".tab_content:first").show();
-
-            // 设置tab onClick事件
-            $("ul.tabs li").hover(function () {
-                $("ul.tabs li").removeClass("active");
-                $(this).addClass("active");
-                $(".tab_content").hide();
-                var activeTab = $(this).find("a").attr("href");
-                $(activeTab).fadeIn();
-                return false;
-            });
-
-//                鼠标经过事件
-//                $(".thumbnail").hover(function () {
-//                    $(".detail_content").css("display","block");
-//
-//                });
-//            禁止onmouseover抖动
-            $('div').mouseout(function () {
-                clearTimeout(t);
-                t = setTimeout(zoomIn, 400);
-            }).mouseover(function () {
-                        if (t != null)clearTimeout(t);
-                        t = null;
-                    }
-            );
-
-        });
-    </script>
-    <!-- jQuery 控制tab切换end -->
-
     <!-- tab_content end -->
 
     <!--学习路线-->
@@ -859,7 +828,7 @@
 </div>
 <!--main content end-->
 <!--footer-->
-<div class="footer">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-sm-2 col-xs-6">
@@ -910,10 +879,47 @@
             </div>
         </div>
     </div>
+</footer>
     <!--jQuery务必要首先引入-->
 
     <script src="./js/bootstrap.min.js"></script>
     <!--自定义js文件-->
     <script src="./js/index.js"></script>
+<!-- jQuery 控制tab切换begin -->
+<script>
+    $(document).ready(function () {
+        // 初始化Tab_content
+        $(".tab_content").hide();
+        $(".tabs li:first").addClass("active").show();
+        $(".tab_content:first").show();
+
+        // 设置tab onClick事件
+        $("ul.tabs li").hover(function () {
+            $("ul.tabs li").removeClass("active");
+            $(this).addClass("active");
+            $(".tab_content").hide();
+            var activeTab = $(this).find("a").attr("href");
+            $(activeTab).fadeIn();
+            return false;
+        });
+
+//                鼠标经过事件
+//                $(".thumbnail").hover(function () {
+//                    $(".detail_content").css("display","block");
+//
+//                });
+//
+        //阻止向上冒泡
+        $(".tabs li a").click(function (event) {
+            event.stopPropagation();
+        });
+    });
+
+    //        清除默认点击事件
+    function doSomething() {
+
+    }
+</script>
+<!-- jQuery 控制tab切换end -->
 </body>
 </html>
