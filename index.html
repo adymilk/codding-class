@@ -794,6 +794,16 @@
 //                    $(".detail_content").css("display","block");
 //
 //                });
+//            禁止onmouseover抖动
+            $('div').mouseout(function () {
+                clearTimeout(t);
+                t = setTimeout(zoomIn, 400);
+            }).mouseover(function () {
+                        if (t != null)clearTimeout(t);
+                        t = null;
+                    }
+            );
+
         });
     </script>
     <!-- jQuery 控制tab切换end -->

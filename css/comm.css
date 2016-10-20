@@ -187,3 +187,7 @@ background-color: #9DA9A2;
 .content a {
     color: #000000;
 }
+
+.tabs li:hover a {
+    color: #1cb25b;
+}
