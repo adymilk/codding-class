@@ -190,4 +190,5 @@ background-color: #9DA9A2;
 
 .active:hover a {
     color: #1cb25b;
+    text-decoration: none;
 }
